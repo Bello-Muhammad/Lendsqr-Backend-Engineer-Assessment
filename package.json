@@ -1,0 +1,46 @@
+{
+  "name": "lensqr",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "22.x",
+    "npm": "10.x"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --exec tsx src/server.ts",
+    "test": "jest --runInBand",
+    "knex": "knex --knexfile dist/knexfile.js",
+    "migration": "knex migrate:make",
+    "db:migrate": "knex migrate:latest",
+    "db:rollback": "knex migrate:rollback"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.18.1",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "knex": "^3.3.0",
+    "mysql2": "^3.22.6",
+    "uuid": "^14.0.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.1.1",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.14",
+    "ts-jest": "^29.2.5",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.23.0",
+    "typescript": "^5.4.5"
+  }
+}
