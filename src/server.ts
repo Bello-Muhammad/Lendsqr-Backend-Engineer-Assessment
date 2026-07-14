@@ -1,6 +1,6 @@
 import express from "express";
 import * as dotenv from "dotenv";
-import walletRoutes from "./routes/wallet.routes"
+import walletRoutes from "./routes/wallet.routes.js"
 
 dotenv.config();
 const app = express();

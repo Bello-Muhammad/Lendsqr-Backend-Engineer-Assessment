@@ -1,7 +1,7 @@
 import { describe, it, expect, jest, beforeEach } from "@jest/globals";
-import { WalletService } from "../services/wallet.service";
-import { db } from "../database/database";
-import { AdjutorService } from "../services/adjutor.service";
+import { WalletService } from "../services/wallet.service.js";
+import { db } from "../database/database.js";
+import { AdjutorService } from "../services/adjutor.service.js";
 
 const mockedDb = db as any;
 const mockedAdjutor = AdjutorService as any;
