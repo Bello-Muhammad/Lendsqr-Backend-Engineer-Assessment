@@ -22,7 +22,7 @@ export class WalletService {
             throw new Error("All input are required: name, email, and password")
         }
 
-        if (name && (typeof (name) !== "string") || email && (typeof (email) == "string") || password && (typeof (password) !== "string")) {
+        if (name && (typeof (name) !== "string") || email && (typeof (email) !== "string") || password && (typeof (password) !== "string")) {
             throw new Error("All input are required: name, email, and password should be string.")
         }
 
