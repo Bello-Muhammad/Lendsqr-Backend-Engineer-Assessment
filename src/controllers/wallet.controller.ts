@@ -39,7 +39,7 @@ export class WalletController {
             const { email, amount } = req.body;
             const data = await WalletService.transferFunds(userId, email, amount);
 
-            return res.status(201).json({ success: true, message: data.message })
+            return res.status(200).json({ success: true, message: data.message })
         } catch (error: any) {
             if (error instanceof Error) {
                 return res.status(400).json({ error: error.message })
@@ -57,7 +57,7 @@ export class WalletController {
 
             const data = await WalletService.withdrawFunds(userId, amount);
 
-            return res.status(201).json({ success: true, message: data.message })
+            return res.status(200).json({ success: true, message: data.message })
         } catch (error: any) {
             if (error instanceof Error) {
                 return res.status(400).json({ error: error.message })
