@@ -102,7 +102,7 @@ export class WalletService {
 
             const reference = uuidv4();
 
-            await trx("transaction").insert([
+            await trx("transactions").insert([
                 {
                     walletId: senderWallet.id,
                     type: "TRANSFER_OUT",
