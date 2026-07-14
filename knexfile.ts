@@ -21,23 +21,6 @@ const config: { [key: string]: Knex.Config } = {
     }
   },
 
-  staging: {
-    client: "mysql2",
-    connection: {
-      database: process.env.DB_NAME as string,
-      user: process.env.DB_USER as string,
-      password: process.env.DB_PASSWORD || ""
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: "knex_migrations",
-      directory: "./src/database/migrations"
-    }
-  },
-
   production: {
     client: "mysql2",
     connection: {
@@ -51,7 +34,8 @@ const config: { [key: string]: Knex.Config } = {
     },
     migrations: {
       tableName: "knex_migrations",
-      directory: "./src/database/migrations"
+      directory: "./src/database/migrations",
+      extension: "js"
     }
   }
 
