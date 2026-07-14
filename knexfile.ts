@@ -24,9 +24,11 @@ const config: { [key: string]: Knex.Config } = {
   production: {
     client: "mysql2",
     connection: {
+      host: process.env.DB_HOST || "127.0.0.1",
+      port: Number(process.env.DB_PORT) || 3306,
       database: process.env.DB_NAME as string,
       user: process.env.DB_USER as string,
-      password: process.env.DB_PASSWORD || ""
+      password: process.env.DB_PASSWORD as string
     },
     pool: {
       min: 2,
