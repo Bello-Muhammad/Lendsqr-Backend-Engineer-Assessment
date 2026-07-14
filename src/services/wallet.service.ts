@@ -1,5 +1,5 @@
-import { db } from "../database/database";
-import { AdjutorService } from "./adjutor.service";
+import { db } from "../database/database.js";
+import { AdjutorService } from "./adjutor.service.js";
 import { v4 as uuidv4 } from "uuid";
 import * as bcrypt from "bcrypt";
 
