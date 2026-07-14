@@ -26,9 +26,12 @@ const config: { [key: string]: Knex.Config } = {
     connection: {
       host: process.env.DB_HOST || "127.0.0.1",
       port: Number(process.env.DB_PORT) || 3306,
-      database: process.env.DB_NAME as string,
       user: process.env.DB_USER as string,
-      password: process.env.DB_PASSWORD as string
+      database: process.env.DB_NAME as string,
+      password: process.env.DB_PASSWORD as string,
+      ssl: {
+        rejectUnauthorized: true
+      }
     },
     pool: {
       min: 2,
