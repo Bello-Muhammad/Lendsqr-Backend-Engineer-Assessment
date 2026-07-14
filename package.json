@@ -14,7 +14,7 @@
     "test": "jest --runInBand",
     "knex": "knex --knexfile dist/knexfile.js",
     "migration": "knex migrate:make",
-    "db:migrate": "knex migrate:latest",
+    "db:migrate": "knex migrate:latest --knexfile dist/knexfile.js",
     "db:rollback": "knex migrate:rollback"
   },
   "keywords": [],
