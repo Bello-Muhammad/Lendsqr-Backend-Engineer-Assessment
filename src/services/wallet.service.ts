@@ -3,6 +3,7 @@ import { AdjutorService } from "./adjutor.service.js";
 import { v4 as uuidv4 } from "uuid";
 import * as bcrypt from "bcrypt";
 
+
 interface userData {
     name: string;
     email: string;
